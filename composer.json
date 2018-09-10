@@ -23,6 +23,7 @@
     "psr-4": {
       "yuns\\" : "src"
     }
+     "minimum-stability": "dev"
   }
 
  
