@@ -4,7 +4,7 @@
   "type": "framework",
   "keywords": ["yuns"],
   "homepage": "https://github.com/sirzhangsai/src",
-  "license": "Apache2",
+  "license": "MIT",
   "authors": [
     {
       "name": "finsh",
