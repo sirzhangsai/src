@@ -4,7 +4,7 @@
   "type": "framework",
   "keywords": ["yuns"],
   "homepage": "https://github.com/sirzhangsai/src",
-  "license": "MIT",
+  "license": "Apache2",
   "authors": [
     {
       "name": "finsh",
@@ -23,7 +23,7 @@
     "psr-4": {
       "yuns\\" : "src"
     }
-  },
+  }
 
  
 }
