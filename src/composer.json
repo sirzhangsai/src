@@ -1,0 +1,29 @@
+{
+  "name": "yuns",
+  "description": "Learn PHP ",
+  "type": "framework",
+  "keywords": ["yuns"],
+  "homepage": "https://github.com/sirzhangsai/src",
+  "license": "Apache2",
+  "authors": [
+    {
+      "name": "finsh",
+      "email": "zhangs_zqu@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0"
+  },
+
+  "autoload": {
+    "files": [
+      "src/yuns.common.php",
+      "src/yuns.const.php"
+    ],
+    "psr-4": {
+      "yuns\\" : "src"
+    }
+  },
+
+  "minimum-stability": "dev"
+}
