@@ -67,8 +67,8 @@ class WebApplication
         $action = $this->httprequest->getAction();
         $method = $this->httprequest->getMethod();
 
-        $actionDir = APP_PATH."modules/{$module}/action/";
-        $actionFile = ucfirst($action)."Action.class.php";
+        $actionDir = APP_PATH."controller/{$module}/";
+        $actionFile = ucfirst($action)."Controller.php";
 
         $fileName = $actionDir.$actionFile;
 
@@ -77,15 +77,13 @@ class WebApplication
             require $fileName;
             //$str = $action."Action";
             //$className =new \ReflectionClass('App\Admin\Action\LoginAction');
-            $className = "App\\".ucfirst($module).'\Action\\'.ucfirst($action)."Action";
-
+            $className = "app\controller\\".$module.'\\'.ucfirst($action)."Controller";
             $relect =new \ReflectionClass($className);
-
             $this->actionInvoke = $relect->newInstance();
-
             $this->actionInvoke->$method($this->httprequest);
 
         }
+        $this->page404();
     }
 
     public function response() {
@@ -101,6 +99,13 @@ class WebApplication
     public function  getConfigs() {
 
         return $this->configs;
+    }
+    /**
+     * 404
+     */
+    public function page404()
+    {
+        echo "你访问的页面不存在";
     }
 
 }
